@@ -2,7 +2,10 @@
 
 import json
 import random
-import pyttsx3
+try:
+    import pyttsx3
+except:
+    print("Biblioteca de reprodução de voz não está instalada, executa no cmd: pip install pyttsx3")
 
 with open('datasets/chat_dataset.json', 'r') as file:
     data = file.read()
@@ -25,10 +28,14 @@ while True:
     else:
         # print(lista)
         resp = str(random.choice(lista))
-
-    engine = pyttsx3.init()
-    engine.setProperty('volume', 0.4)
-    engine.setProperty('rate', 125)
-    engine.setProperty('voice', 'english')
-    engine.say(resp)
-    engine.runAndWait()
+    
+    print(resp)
+    try:
+        engine = pyttsx3.init()
+        engine.setProperty('volume', 0.4)
+        engine.setProperty('rate', 125)
+        engine.setProperty('voice', 'english')
+        engine.say(resp)
+        engine.runAndWait()
+    except:
+        print("Cant reproduce voice!")
