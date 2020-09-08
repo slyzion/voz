@@ -3,7 +3,8 @@
 import json
 import random
 try:
-    import pyttsx3
+    from gtts import gTTS
+    from io import BytesIO
 except:
     print("Biblioteca de reprodução de voz não está instalada, executa no cmd: pip install pyttsx3")
 
@@ -31,11 +32,19 @@ while True:
     
     print(resp)
     try:
-        engine = pyttsx3.init()
-        engine.setProperty('volume', 0.4)
-        engine.setProperty('rate', 125)
-        engine.setProperty('voice', 'english')
-        engine.say(resp)
-        engine.runAndWait()
-    except:
-        print("Cant reproduce voice!")
+        print(1)
+        mp3_fp = BytesIO()
+        print(2)
+        tts = gTTS(resp, lang='en')
+        print(3)
+        tts.write_to_fp(mp3_fp)
+        print(4)
+
+        # engine = pyttsx3.init()
+        # engine.setProperty('volume', 0.4)
+        # engine.setProperty('rate', 125)
+        # engine.setProperty('voice', 'english')
+        # engine.say(resp)
+        # engine.runAndWait()
+    except ExceptError as e:
+        print(e)
