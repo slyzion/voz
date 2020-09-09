@@ -3,10 +3,10 @@
 import json
 import random
 try:
+    from playsound import playsound
     from gtts import gTTS
-    from io import BytesIO
 except:
-    print("Biblioteca de reprodução de voz não está instalada, executa no cmd: pip install pyttsx3")
+    print("Biblioteca de reprodução de voz não está instalada")
 
 with open('datasets/chat_dataset.json', 'r') as file:
     data = file.read()
@@ -33,11 +33,12 @@ while True:
     print(resp)
     try:
         print(1)
-        mp3_fp = BytesIO()
+        filename = "voice.mp3"
         print(2)
-        tts = gTTS(resp, lang='en')
+        tts = gTTS(resp, lang='en', slow=False)
         print(3)
-        tts.write_to_fp(mp3_fp)
+        tts.save(filename)
+        playsound(filename)
         print(4)
 
         # engine = pyttsx3.init()
@@ -46,5 +47,5 @@ while True:
         # engine.setProperty('voice', 'english')
         # engine.say(resp)
         # engine.runAndWait()
-    except ExceptError as e:
+    except Exception as e:
         print(e)
