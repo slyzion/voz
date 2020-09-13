@@ -1,8 +1,16 @@
 [
     {
-    "question": "what is apple",
-    "answer": "could be anything or anyone"
-},
+        "question": "test",
+        "answer": "it's a nice day\ngood luck"
+    },
+    {
+        "question": "exit",
+        "answer": "good bye!"
+    },
+    {
+        "question": "what is apple",
+        "answer": "could be anything or anyone"
+    },
     {
         "question": "tell me about your parents",
         "answer": "RIT is my home, engineers are my parents"

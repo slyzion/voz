@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import tools
+
 import json
 import random
 try:
@@ -8,11 +10,11 @@ try:
 except:
     print("Biblioteca de reprodução de voz não está instalada")
 
-with open('datasets/chat_dataset.json', 'r') as file:
+obj = ""
+with open('datasets/chat_dataset_pt.json', 'r') as file:
     data = file.read()
-
-
-obj = json.loads(data)
+    obj = json.loads(data)
+    file.close()
 
 while True:
     print(">", end=" ")
@@ -30,22 +32,22 @@ while True:
         # print(lista)
         resp = str(random.choice(lista))
     
+    if resp[0] == '&':
+        tool = tools.Tools(resp)
+        resp = tool.exec()
+    
     print(resp)
     try:
-        print(1)
+        #print(1)
         filename = "voice.mp3"
-        print(2)
-        tts = gTTS(resp, lang='en', slow=False)
-        print(3)
+        #print(2)
+        tts = gTTS(resp, lang='pt', slow=False)
+        #print(3)
         tts.save(filename)
         playsound(filename)
-        print(4)
-
-        # engine = pyttsx3.init()
-        # engine.setProperty('volume', 0.4)
-        # engine.setProperty('rate', 125)
-        # engine.setProperty('voice', 'english')
-        # engine.say(resp)
-        # engine.runAndWait()
+        #print(4)
     except Exception as e:
         print(e)
+
+    if text == "sair":
+        exit(0)
