@@ -1,10 +1,10 @@
 [
     {
-        "question": "time",
+        "question": "horas",
         "answer": "&time;"
     },
     {
-        "question": "date",
+        "question": "data",
         "answer": "&date;"
     },
     {
@@ -13,7 +13,7 @@
     },
     {
         "question": "sair",
-        "answer": "adeus!"
+        "answer": "Adeus, até à próxima!"
     },
     {
         "question": "o que é maçã",
@@ -28,7 +28,7 @@
         "answer": "RIT!"
     },
     {
-        "question": "fale-me sobre sua mãe",
+        "question": "fale-me sobre sua mae",
         "answer": "RIT é minha mãe"
     },
     {

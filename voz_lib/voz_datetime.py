@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+from . import voz_getconfig as getconf
 import json
 #import ntplib
 
@@ -23,8 +24,12 @@ def getDate():
    current_year = d.strftime(" de %Y")
    current_month = int(d.strftime("%m"))
 
+   # obtem a lingua das configuracoes
+   config = getconf.Config('src/config.json')
+   lang = config.getlang()
+
    obj = ""
-   with open('lang/months_pt.json') as file:
+   with open('src/'+lang+'/months.json') as file:
       data = file.read()
       obj = json.loads(data)
       file.close()
@@ -33,5 +38,3 @@ def getDate():
       if i['number'] == current_month:
          return "Hoje é "+current_day+i['name']+current_year
 
-if __name__ == "__main__":
-   print(getDate())

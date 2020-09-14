@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import voz_datetime as tm
+from voz_lib import voz_datetime
 
 
 class Tools:
@@ -9,7 +9,7 @@ class Tools:
 
     def exec(self):
         if self.option == '&time;':
-            return tm.getTime()
+            return voz_datetime.getTime()
         elif self.option == '&date;':
-            return tm.getDate()
+            return voz_datetime.getDate()
 

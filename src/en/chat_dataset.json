@@ -1,5 +1,17 @@
 [
     {
+        "question": "*",
+        "answer": "I can't answer"
+    },
+    {
+        "question": "time",
+        "answer": "&time;"
+    },
+    {
+        "question": "date",
+        "answer": "&date;"
+    },
+    {
         "question": "test",
         "answer": "it's a nice day\ngood luck"
     },
