@@ -1,8 +1,4 @@
-> Escolher as linguas mais adequadas para o projeto dentro dos seguintes parametros: (no máximo 4)
-    - Velocidade
-    - Suporte
-
-> Estrutura do do programa:
+> Estrutura do programa:
     - entrada de texto
     - processamento do texto
     - processamento da resposta
