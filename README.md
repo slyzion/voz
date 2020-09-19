@@ -3,13 +3,13 @@
 ## Intalation
 Use the package manager pip to install all dependencies.
 
-'''bash
+```bash
 pip3 install -r requirements.txt
-'''
+```
 
 ## Usage
 Run the following command on the terminal
 
-'''zsh
+```bash
 python3 index.py
-'''
+```
