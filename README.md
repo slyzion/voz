@@ -1,6 +1,6 @@
 # voz
 
-## Intalation
+## Instalation
 Use the package manager pip to install all dependencies.
 
 ```bash

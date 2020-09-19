@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 # Importacao de bibliotecas privadas
-from voz_lib import voz_getconfig as getconf
 import tools                            # execucao de comandos do utilizador 
 
 # Importacao de bibliotecas publicas
@@ -16,14 +15,10 @@ except:
 
 
 
-# obtem a lingua das configuracoes
-config = getconf.Config('src/config.json')
-lang = config.getlang()
-
 
 # Obtem as perguntas e respostas do ficheiro json
 obj = ""
-with open('src/'+lang+'/chat_dataset.json', 'r') as file:
+with open('src/chat_dataset.json', 'r') as file:
     data = file.read()
     obj = json.loads(data)
     file.close()
@@ -60,7 +55,7 @@ while True:
         #print(1)
         filename = "voice.mp3"
         #print(2)
-        tts = gTTS(resp, lang=lang, slow=False)
+        tts = gTTS(resp, lang='pt', slow=False)
         #print(3)
         tts.save(filename)
         playsound(filename)
