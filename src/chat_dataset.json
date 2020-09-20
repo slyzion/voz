@@ -1,10 +1,10 @@
 [
     {
-        "question": ["horas", "hora"],
+        "question": "horas",
         "answer": "&time;"
     },
     {
-        "question": ["data", "dia", "hoje"],
+        "question": "data",
         "answer": "&date;"
     },
     {

@@ -1,26 +1,34 @@
 [
     {
+        "keywords": ["ola", "ola", "oi", "oi"],
+        "answer": ["Olá, como vai o dia?"]
+    },
+    {
         "keywords": ["bom", "boa", "dia"],
-        "answer": "Olá, bom dia"
+        "answer": ["Olá, bom dia", "Olá, hoje é um grande dia!"]
+    },
+    {
+        "keywords": ["bom", "boa", "dia"],
+        "answer": ["Olá, como estás tu?"]
     },
     {
         "keywords": ["bom", "boa", "tarde"],
-        "answer": "Olá boa tarde"
+        "answer": ["Olá boa tarde"]
     },
     {
         "keywords": ["q", "que", "horas", "hora"],
-        "answer": "&time;"
+        "answer": ["&time;"]
     },
     {
         "keywords": ["data", "dia", "hoje", "que", "q"],
-        "answer": "&date;"
+        "answer": ["&date;"]
     },
     {
         "keywords": ["teste", "teste"],
-        "answer": "Hoje é um grande dia\nBoa sorte"
+        "answer": ["Hoje é um grande dia\nBoa sorte"]
     },
     {
         "keywords": ["sair", "sair"],
-        "answer": "Adeus, até à próxima!"
+        "answer": ["Adeus, até à próxima!"]
     }
 ]
