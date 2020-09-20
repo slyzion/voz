@@ -1,41 +1,47 @@
 #!/usr/bin/python3
 
-import tools
+import tools        # voz tools
 
 import string
 import unidecode
 import json
 import random
 import os
+import re
 
 try:
-    from playsound import playsound     # tocar audios
-    from gtts import gTTS               # obter audio voz do google
+    from playsound import playsound     # play audios
+    from gtts import gTTS               # get voice from google
 except:
     print("> Instale primeiro as dependencias!!!")
     exit(0)
 
+###### get 'config.json' functionalities
+with open() as file:
+    sys_append = 
+
 
 while True:
+    os.system('./bin/syncKeywords')
+    ######## - Entrada - ########
+    # get text
     print(">", end=" ")
     text = input()
+    #############################
 
-    # remove accentuation
-    text = unidecode.unidecode(text)
+    ######## - Processamento do texto - ########
+    # clean text
+    text = unidecode.unidecode(text)                        # remove accentuation
+    table = str.maketrans(dict.fromkeys(string.punctuation))# remove punctuation signals
+    for i in table:
+        text = text.replace(chr(i), ' ')                    # remove punctuation signals
+    text = re.sub(' +', ' ', text).strip()                  # remove extra spaces
+    text = text.lower()                                     # text to lower case
+    text = text.split(" ")                                  # split text
 
-    # remove punctuation signals
-    table = str.maketrans(dict.fromkeys(string.punctuation))
-    text= text.translate(table)
+    ############################################
 
-    # text to lower case
-    text = text.lower()
-
-    # split text
-    text = text.split(" ")
-
-    #print(text)
-
-
+    ######## - Processamento da resposta - ########
     # get list of keywords
     obj = ""
     with open('src/keywords.json', 'r') as file:
@@ -53,7 +59,7 @@ while True:
 
     #print(keys)
 
-    ##################################
+    # get chat answers
     with open('src/test.json', 'r') as file:
         data = file.read()
         obj = json.loads(data)
@@ -78,22 +84,22 @@ while True:
 
     # escolher qual a resposta a dar
     if not resp:
-        resp = str(random.choice(["Não consigo perceber", "OK", "?", "\U0001F609"]))
+        resp = str(random.choice(["Não consigo perceber", "Não percebi", "OK", "Fixe"]))
     else:
         resp = str(random.choice(resp))
 
-    
 
     # se resposta comecar com '&' executa comando correspondente
+    cmd = ""
     if resp[0] == '&':
         tool = tools.Tools(resp)
-        resp = tool.exec()
+        resp, cmd = tool.exec()
 
     # print response
     print(resp)
     try:
         #print(1)
-        filename = "voice.mp3"
+        filename = "voice.wav"
         #print(2)
         tts = gTTS(resp, lang='pt', slow=False)
         #print(3)
@@ -103,3 +109,6 @@ while True:
         os.remove(filename)
     except Exception as e:
         print(e)
+
+    if cmd == '&sair;':
+        exit(0)

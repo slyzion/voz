@@ -1,5 +1,9 @@
 [
     {
+        "keywords": ["quem", "tu", "qual", "teu", "nome"],
+        "answer": ["Eu sou a Inês", "Eu sou a tua melhor amiga"]
+    },
+    {
         "keywords": ["ola", "ola", "oi", "oi"],
         "answer": ["Olá, como vai o dia?"]
     },
@@ -16,7 +20,11 @@
         "answer": ["Olá boa tarde"]
     },
     {
-        "keywords": ["q", "que", "horas", "hora"],
+        "keywords": ["teste", "teste"],
+        "answer": ["Hoje é um grande dia\nBoa sorte"]
+    },
+    {
+        "keywords": ["q", "que", "horas", "agora", "hora"],
         "answer": ["&time;"]
     },
     {
@@ -24,11 +32,12 @@
         "answer": ["&date;"]
     },
     {
-        "keywords": ["teste", "teste"],
-        "answer": ["Hoje é um grande dia\nBoa sorte"]
+        "keywords": ["meteorologia", "tempo", "hoje"],
+        "answer": ["Belo dia"]
+
     },
     {
-        "keywords": ["sair", "sair"],
-        "answer": ["Adeus, até à próxima!"]
+        "keywords": ["sair", "sair", "adeus", "embora", "tchau", "vou"],
+        "answer": ["&sair;Adeus, até à próxima!", "&sair;Foi bom conversar contigo, adeus!"]
     }
 ]
