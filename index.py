@@ -33,7 +33,7 @@ while True:
     # split text
     text = text.split(" ")
 
-    print(text)
+    #print(text)
 
 
     # get list of keywords
@@ -51,7 +51,7 @@ while True:
             if i == j:
                 keys.append(str(i))
 
-    print(keys)
+    #print(keys)
 
     ##################################
     with open('src/test.json', 'r') as file:
@@ -68,10 +68,13 @@ while True:
             for k in lista:
                 if k == j:
                     count += 1     
-        print(count)
+        #print(count)
         if count > 1:
-            resp.append(i['answer'])
+            text = i['answer']
+            for k in text:
+                resp.append(k)
 
+    #print("resp>",resp)
 
     # escolher qual a resposta a dar
     if not resp:
@@ -100,7 +103,3 @@ while True:
         os.remove(filename)
     except Exception as e:
         print(e)
-
-
-    if resp == "sair":
-        exit(0)
