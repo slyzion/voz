@@ -1,15 +1,15 @@
 [
     {
-        "question": "horas",
+        "question": ["horas", "hora"],
         "answer": "&time;"
     },
     {
-        "question": "data",
+        "question": ["data", "dia", "hoje"],
         "answer": "&date;"
     },
     {
         "question": "teste",
-        "answer": "Hoje é um grande dia\nBoa sorte"
+        "answer": "Hoje é um grande dia :smile:\nBoa sorte"
     },
     {
         "question": "sair",
@@ -365,7 +365,7 @@
     },
     {
         "question": "você é coxo",
-        "answer": "\" coxo \"não é um termo muito educado."
+        "answer": "\"coxo\"não é um termo muito educado."
     },
     {
         "question": "você soa exatamente como mitsuku",
@@ -413,7 +413,7 @@
     },
     {
         "question": "é você",
-        "answer": "não direi \" sim \"ou \" não \"agora."
+        "answer": "não direi \"sim\" ou \"não\" agora."
     },
     {
         "question": "por que",
@@ -637,7 +637,7 @@
     },
     {
         "question": "no it fixed",
-        "answer": "você gosta de \" seguir o fluxo \"? depende de qual é o significado da palavra \" isso \"."
+        "answer": "você gosta de \"seguir o fluxo\"? depende de qual é o significado da palavra \"isso\"."
     },
     {
         "question": "cale a boca e ouça",

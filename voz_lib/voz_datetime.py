@@ -33,5 +33,5 @@ def getDate():
 
    for i in obj:
       if i['number'] == current_month:
-         return "Hoje é "+current_day+i['name']+current_year
+         return "Hoje é dia "+current_day+i['name']+current_year
 

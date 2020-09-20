@@ -1,0 +1,26 @@
+[
+    {
+        "keywords": ["bom", "boa", "dia"],
+        "answer": "Olá, bom dia"
+    },
+    {
+        "keywords": ["bom", "boa", "tarde"],
+        "answer": "Olá boa tarde"
+    },
+    {
+        "keywords": ["q", "que", "horas", "hora"],
+        "answer": "&time;"
+    },
+    {
+        "keywords": ["data", "dia", "hoje", "que", "q"],
+        "answer": "&date;"
+    },
+    {
+        "keywords": ["teste", "teste"],
+        "answer": "Hoje é um grande dia\nBoa sorte"
+    },
+    {
+        "keywords": ["sair", "sair"],
+        "answer": "Adeus, até à próxima!"
+    }
+]
