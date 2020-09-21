@@ -8,6 +8,7 @@ import json
 import random
 import os
 import re
+import platform
 
 try:
     from playsound import playsound     # play audios
@@ -17,12 +18,16 @@ except:
     exit(0)
 
 ###### get 'config.json' functionalities
-with open() as file:
-    sys_append = 
+sys_append = ""
+with open('./src/config.json') as file:
+    sys = platform.system()
+    data = file.read()
+    data = json.loads(data)
+    sys_append = data['os'][sys]
 
 
 while True:
-    os.system('./bin/syncKeywords')
+    os.system('./bin/syncKeywords'+sys_append)
     ######## - Entrada - ########
     # get text
     print(">", end=" ")

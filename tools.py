@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from voz_lib import voz_datetime
+from modules import voz_datetime
 
 
 class Tools:

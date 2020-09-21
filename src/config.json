@@ -1,7 +1,6 @@
 {
     "os": {
         "Windows": ".exe",
-        "Linux": "",
-        "Darwin": ""
+        "Linux": ""
     }
 }
